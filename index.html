@@ -9,9 +9,39 @@
 </head>
 
 <body>
+  <!-- Navbar (sit on top) -->
+  <header class="header">
+    <nav class="navbar">
+      <div>
+        <button class="navbar_toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+  
+      <ul class="main_nav">
+        <li>
+          <a href="#" class="nav_links">HOME</a>
+        </li>
+        <li>
+          <a href="#" class="nav_links">PRODUCTS</a>
+        </li>
+        <li>
+          <a href="#" class="nav_links">ABOUT</a>
+        </li>
+        <li>
+          <a href="#" class="nav_links">CONTACT</a>
+        </li>
+        <li>
+          <a href="#" class="nav_links">BLOG</a>
+        </li>
+      </ul>
+  
+    </nav>
+  </header>
 
-  <h2>Responsive Form</h2>
-<p>Resize the browser window to see the effect. When the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other.</p>
+
+  <h2>Comments</h2>
+<p>Please leave your comments.</p>
 
 <div class="container">
   <div class="row">
@@ -35,15 +65,16 @@
       <label for="subject">Comments</label>
     </div>
     <div class="col-75">
-      <input  type="text" id="userInput" name="message" onkeyup="countChars(this);"></input>
-      <button onclick="myFunction()" > Sumbit </button>
+      <input  type="text" id="userInput" name="message" placeholder="Your comments..." onkeyup="countChars(this);" ></input>
+      <button class="submit-button" onclick="myFunction()" > Submit </button>
 
     </div>
   </div>
-  <p id="charNum">25 characters remaining</p>
-  <h1 id="userOutput">  </h1>
+
 </div>
 
+<p id="charNum">140 characters remaining</p>
+<h1 id="userOutput">  </h1>
 
 
 
@@ -51,41 +82,14 @@
   <footer class="">
     <div class="">
       <h3>FOOTER</h3>
-      <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+      <p>Thank you for visiting our site.</p>
     </div>
 
   </footer>
 
 
 <!-- End page content -->
-</div>
-<script>
-
-function myFunction(){
-  alert
-    let userInput = document.querySelector("#userInput");
-    let userOuput = document.querySelector("#userOuput");
-
-    userOutput.innerHTML = "Thank you for submitting your comment, we have logged this as: " + userInput.value;
-
-  }
-
-function countChars(obj){
-  document.getElementById("charNum").innerHTML = obj.value.length+' characters';
-}
-
-function countChars(obj){
-  var maxLength = 20;
-  var strLength = obj.value.length;
-  
-  if(strLength > maxLength){
-      document.getElementById("charNum").innerHTML = '<span style="color: red;">'+strLength+' out of '+maxLength+' characters</span>';
-      document.getElementById("comments").value = '<span style="color: red;">';
-    }else{
-      document.getElementById("charNum").innerHTML = strLength+' out of '+maxLength+' characters';
-  }
-}
-</script>
+<script defer src="./website.js"></script>
 
 </body>
 </html>

@@ -9,47 +9,48 @@
 </head>
 
 <body>
+<form id="contactForm" name="contactForm">
+  <h2>Contact us</h2>
+  <p style="text-align: center; margin: 2em">
+    Got a question? We'd love to hear from you. Send us a message and
+    we'll respond as soon as possible.
+  </p>
 
-<div class="header">
-  <h1>COMMENTS</h1>
-</div>
-<br>
-<h3>Please leave your comments.</h3>
+  <label for="name">Name</label>
+  <input id="name" name="name" type="text" placeholder="Your Name"/>
 
-<div class="container">
-  <div class="row">
-    <div class="col-25">
-      <label for="name">Name</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="name" name="name" placeholder="Your name...">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-25">
-      <label for="email">Email</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="email" name="email" placeholder="Your email...">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-25">
-      <label for="subject">Comments</label>
-    </div>
-    <div class="col-75">
-      <input  type="text" id="userInput" name="message" placeholder="Your comments..." onkeyup="countChars(this);" ></input>
-      <button class="submit-button" onclick="myFunction()" > Submit </button>
+  <label for="email">Email</label>
+  <input
+    id="email"
+    name="email"
+    type="email"
+    placeholder="Email address"
+  />
 
-    </div>
-  </div>
+  <label for="message">Comment</label>
+  <textarea
+    id="message"
+    name="message"
+    placeholder="Your message..."
+  ></textarea>
 
-</div>
+  <p id="charNum">140 characters remaining</p>
 
-<div>
-<p id="charNum">140 characters remaining</p>
-<h2 id="userOutput">  </h2>
-</div>
+
+  <output id="output"></output>
+
+
+  <input
+    type="submit"
+    value="Submit"
+    name="submit-button"
+    id="submit-button"
+    class="submit-button"
+  />
+  <p id="userOutput">  </h2>
+</form>
+
+
 
 
 
@@ -58,3 +59,4 @@
 
 </body>
 </html>
+

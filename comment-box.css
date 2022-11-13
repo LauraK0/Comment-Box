@@ -1,155 +1,93 @@
-/* Project Gallery 18/07/2022 by Laura Keating */
+:root {
+  --bg-colour: #EEFBFB; /* Background colour*/
+  --fg-colour-one: #203647; /* Accent 1*/
+  --fg-colour-two: #4DA8DA; /* Accent 2*/
+  --fg-colour-three: #007CC7; /* Accent 3*/
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-body,h1,h2,h3,h4,h5,h6,input,textarea {
-  font-family: "Ubuntu", sans-serif
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: var(--bg-colour);
 }
-
-.header{
-  position: relative;
-  height:150px;
-  background-color:#000;
-}
-
-h1 {
-  position:relative;
-  top:30%;
-  font-size: 140%;
-  padding:12px;
-  color: white;
-  letter-spacing: 10px;
-  text-align:center;
-  animation:opac 0.8s;
-}
-
 h2 {
-  color: black;
-  opacity: 0.8;
   font-size: 160%;
-  padding: 60px;
-  margin-left: 10%;
-  margin-right: 10%;
+  padding: 20px;
   text-align: center;
 }
-
 h3 {
   position:relative;
   font-size: 110%;
-  padding:12px;
-  color: black;
   text-align:center;
-  opacity: 0.7;
 }
-
 p {
-  color: #7E7B78;
-  font-size: 100%;
-  padding: 10px;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
+  margin: 0.5em;
 }
-
-
-textarea {
-    line-height: 1;
+/*contact us form*/
+#contactForm {
+  margin-top: 50px;
+  max-width: 450px;
 }
-
-.submit-button {
-  background-color: black;
-  opacity: 0.75;
-  border: none;
-  border-radius: 0.5em;
+form > h2 {
   color: white;
-  padding: 16px 32px;
+  font-size: 2em;
   text-align: center;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition: 0.3s;
-  display: inline-block;
-  text-decoration: none;
-  cursor: pointer;
 }
-
-.submit-button:hover {opacity: 1}
-
-  
-  input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
-  }
-
-  .commentBox {
-    width: 100%;
-    padding: 12px;
-    height: 10em;
-    resize: vertical;
-  }
-  
-  label {
-    padding: 12px 12px 12px 0;
-    display: inline-block;
-  }
-  
-  input[type=submit] {
-    background-color: #04AA6D;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    float: right;
-  }
-  
-  input[type=submit]:hover {
-    background-color: #45a049;
-  }
-  
-  .container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-    margin: 3em;
-  }
-  
-  .col-25 {
-    float: left;
-    width: 25%;
-    margin-top: 6px;
-  }
-  
-  .col-75 {
-    float: left;
-    width: 75%;
-    margin-top: 6px;
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-
-form div p {
-  margin-left: 16em;
-  padding: 0.25em 0.4em;
-  font-size: 75%;
-  line-height: 1;
+label,
+input,
+button,
+textarea {
+  display: block;
+  font: inherit;
+  color: inherit;
+  margin-top: 0.3em;
 }
-
-  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .col-25, .col-75, input[type=submit] {
-      width: 100%;
-      margin-top: 0;
-    }
-  }
+label {
+  margin-top: 0.8rem;
+}
+input,
+textarea,
+fieldset {
+  width: 100%;
+  border: 1px solid hsl(220, 10%, 75%);
+}
+textarea {
+  resize: vertical;
+}
+form {
+  margin: 1.5rem auto;
+  max-width: 40vw;
+  padding: 2vw;
+  background-color: var(--fg-colour-one);
+  color: white;
+}
+input,
+textarea {
+  padding: 0.5rem 0.5rem;
+  color: black;
+  border: none;
+}
+textarea {
+  min-height: 160px;
+}
+.submit-button {
+  margin-top: 1rem;
+  padding: 0.75rem 0.5rem;
+  background-color: var(--fg-colour-two);
+  transition: background-color 0.2s;
+  color: black;
+  border: 1px var(--fg-colour-two);
+}
+.submit-button:hover {
+  background-color: var(--fg-colour-two);
+}
+.error {
+  color: red;
+}
+/*end contact us form */
